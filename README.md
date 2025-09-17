@@ -26,7 +26,6 @@ An end-to-end **AI-powered customer support system** combining **RAG-based answe
 - Recognizes urgent cases and escalates to senior agents when needed
 - Answers questions by pulling information from the company’s database or FAQs
 - Provides accurate and up-to-date responses instantly
-- Reminds customers to keep their Chat ID and Ticket ID handy
 - Automatically chooses the best response: ticket update, escalation, or information
 
 
