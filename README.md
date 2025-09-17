@@ -139,6 +139,7 @@ Check terminal logs for initialization errors (LLM/RAG)
     - .env: OPENAI_API_KEY
       
     - **Azure OpenAI**
+      ```python
       from langchain_openai import AzureChatOpenAI
       self.llm = AzureChatOpenAI(
       azure_deployment="YOUR_DEPLOYMENT_NAME",
@@ -147,7 +148,8 @@ Check terminal logs for initialization errors (LLM/RAG)
       api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview"),
       temperature=0.5,
        )
-.env: AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_VERSION
+      .env: AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_VERSION
+      ```
 Anthropic (Claude)
 from langchain_anthropic import ChatAnthropic
 self.llm = ChatAnthropic(model="claude-3-5-sonnet-20240620", temperature=0.5)
