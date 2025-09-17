@@ -23,7 +23,7 @@ An end to end **AI-powered customer support system** combining **Hybrid RAG-base
 - Automatically chooses the best response: ticket update, escalation, or information
 
 ---
-## Capabilities of Ticket Dashboard 
+## Capabilities of Support Ticket Dashboard 
 - Displays a centralized view of all support tickets in a clean, modern interface
 - Allows real-time tracking of tickets to monitor progress
 - Provides easy-to-read ticket cards with query details and status highlights
@@ -32,7 +32,16 @@ An end to end **AI-powered customer support system** combining **Hybrid RAG-base
 - Supports data-driven insights by loading ticket data from spreadsheets/databases
 
 ---
+## Capabilities of Chat History Dashboard
+- Provides a centralized dashboard to view all past chat conversations
+- Displays per-chat transcripts with clear, expandable details
+- Uses Chat ID as a reference for organizing and tracking conversations
+- Allows quick searching and filtering of chat sessions
+- Shows conversation “turns” to highlight how the interaction flowed
+- Presents data in a professional, clean interface with a wide layout
+- Helps support teams revisit, analyze, and resolve recurring issues
 
+---
 ##  Project Structure  
 
 ```text
@@ -60,7 +69,6 @@ Atlan Customer Support Copilot/
 - Python **3.8+** installed  
 - An **OpenAI API key**  
 
----
 
 ##  1) Setup (Recommended: Virtual Environment)  
 
