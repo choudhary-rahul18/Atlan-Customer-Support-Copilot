@@ -81,45 +81,52 @@ files/tickets.xlsx → Tickets store
 files/chat_history.xlsx → Chat history store
 ```
 
-## 4) Common Issues & Troubleshooting
+## 3) Common Issues & Troubleshooting
 ```bash
 “ModuleNotFoundError: No module named ‘langchain_openai’”
 Ensure venv is activated
+
 Use: python -m uvicorn backend:app --reload
 Reinstall in venv: pip install langchain-openai
 “OpenAI key not found”
+
 Confirm .env exists in project root
 Ensure OPENAI_API_KEY is properly set
+
 Restart the backend
+
 Excel file “permission denied”
 Close the file if opened in Excel
+
 Ensure paths are correct and writable
 Frontend loads but backend offline
+
 Start backend first
-Verify http://localhost:8000/health
+
+- Verify http://localhost:8000/health
 Check terminal logs for initialization errors (LLM/RAG)
 ```
 
-##  5) Recommended Workflow for Collaborators
-```bash
-Clone or download the project
-Create and activate a virtual environment
-Install dependencies: pip install -r requirements.txt
-Add .env with OPENAI_API_KEY
-Ensure files/ contains: sample1.xlsx, tickets.xlsx, chat_history.xlsx
-Start backend:
-python -m uvicorn backend:app --reload
-API docs: http://localhost:8000/docs
-Health: http://localhost:8000/health
-Status: http://localhost:8000/status
-Start frontend:
-streamlit run Customer_Support_Copilot.py
-Use the “New Session” button to generate a fresh chat_id
-Check dashboards under /pages
-```
+##  4) Recommended Workflow for Collaborators
+
+- Clone or download the project
+- Create and activate a virtual environment
+- Install dependencies: pip install -r requirements.txt
+- Add .env with OPENAI_API_KEY
+- Ensure files/ contains: sample1.xlsx, tickets.xlsx, chat_history.xlsx
+- **Start backend**:
+  - python -m uvicorn backend:app --reload
+  - API docs: http://localhost:8000/docs
+  - Health: http://localhost:8000/health
+  - Status: http://localhost:8000/status
+  - Start frontend:
+  - streamlit run Customer_Support_Copilot.py
+  - Use the “New Session” button to generate a fresh chat_id
+  - Check dashboards under /pages
+
 
 ##  6) LLM Usage Policy (Read Before Changing Models)
-```bash
+
 *Golden Rule: Always use LangChain chat model integrations.
 *Do not switch to raw provider SDKs — this requires major changes in prompts, chain code, and output parsing.
 *To switch providers, update only:
@@ -176,10 +183,10 @@ self.llm = ChatOpenAI(
 .env: OPENAI_BASE_URL, OPENAI_API_KEY (dummy if server doesn’t enforce auth)
 Restart after changes:
 python -m uvicorn backend:app --reload
-```
+
 
 ## 7) Collaborator Setup Guide
-```bash
+
 Clone/download repository locally
 Create & activate venv
 Install dependencies with pip install -r requirements.txt
@@ -194,7 +201,6 @@ python -m uvicorn backend:app --reload
 Start frontend:
 streamlit run Customer_Support_Copilot.py
 Use “New Session” to create a fresh chat_id
-```
 
 ##  8) API Quick Reference
 ```bash
