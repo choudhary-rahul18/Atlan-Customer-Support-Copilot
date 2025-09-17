@@ -22,6 +22,16 @@ An end to end **AI-powered customer support system** combining **Hybrid RAG-base
 - Provides accurate and up-to-date responses instantly
 - Automatically chooses the best response: ticket update, escalation, or information
 
+---
+## Capabilities of Ticket Dashboard 
+- Displays a centralized view of all support tickets in a clean, modern interface
+- Allows real-time tracking of tickets to monitor progress
+- Provides easy-to-read ticket cards with query details and status highlights
+- Includes search and filtering options (via pandas/streamlit integration) for faster access
+- Tracks timestamps to show when tickets were created and updated
+- Supports data-driven insights by loading ticket data from spreadsheets/databases
+
+---
 
 ##  Project Structure  
 
