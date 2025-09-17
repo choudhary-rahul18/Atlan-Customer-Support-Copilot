@@ -125,7 +125,7 @@ Check terminal logs for initialization errors (LLM/RAG)
 
 
 ## 5) Collaborator Setup Guide
-# For teammates setting this up locally:
+#### For teammates setting this up locally:
  - Clone/download the repository to a local folder.
  - Create a virtual environment inside the project and activate it:
 
