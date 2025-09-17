@@ -29,7 +29,7 @@ An end to end **AI-powered customer support system** combining **Hybrid RAG-base
 - Provides easy-to-read ticket cards with query details and status highlights
 - Includes search and filtering options (via pandas/streamlit integration) for faster access
 - Tracks timestamps to show when tickets were created and updated
-- Supports data-driven insights by loading ticket data from spreadsheets/databases
+- Supports data-driven insights by loading ticket data from databases
 
 ---
 ## Capabilities of Chat History Dashboard
