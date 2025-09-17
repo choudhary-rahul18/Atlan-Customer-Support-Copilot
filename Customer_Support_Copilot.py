@@ -6,7 +6,7 @@ from datetime import datetime
 import json, logging, sys, random
 
 # Configuration
-API_BASE_URL = "https://afc353c7bf97.ngrok-free.app"
+API_BASE_URL = "https://240c14da8b7e.ngrok-free.app"
 
 # Streamlit page config
 st.set_page_config(
