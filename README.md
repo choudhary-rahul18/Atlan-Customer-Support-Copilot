@@ -79,31 +79,6 @@ pip install -r requirements.txt
 - files/tickets.xlsx → Tickets store
 - files/chat_history.xlsx → Chat history store
 
-## 3) Common Issues & Troubleshooting
-```bash
-“ModuleNotFoundError: No module named ‘langchain_openai’”
-Ensure venv is activated
-
-Use: python -m uvicorn backend:app --reload
-Reinstall in venv: pip install langchain-openai
-“OpenAI key not found”
-
-Confirm .env exists in project root
-Ensure OPENAI_API_KEY is properly set
-
-Restart the backend
-
-Excel file “permission denied”
-Close the file if opened in Excel
-
-Ensure paths are correct and writable
-Frontend loads but backend offline
-
-Start backend first
-
-- Verify http://localhost:8000/health
-Check terminal logs for initialization errors (LLM/RAG)
-```
 
 
 ## 5) Collaborator Setup Guide
