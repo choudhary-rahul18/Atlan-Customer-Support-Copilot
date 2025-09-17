@@ -120,10 +120,10 @@ Check dashboards under /pages
 
 ##  6) LLM Usage Policy (Read Before Changing Models)
 ```bash
-Golden Rule: Always use LangChain chat model integrations.
-Do not switch to raw provider SDKs — this requires major changes in prompts, chain code, and output parsing.
-To switch providers, update only:
-File: backend.py
+*Golden Rule: Always use LangChain chat model integrations.
+*Do not switch to raw provider SDKs — this requires major changes in prompts, chain code, and output parsing.
+*To switch providers, update only:
+*File: backend.py
 Class: BackendState
 Method: _initialize_llm(self)
 Provider examples:
@@ -153,7 +153,7 @@ Mistral
 from langchain_mistralai import ChatMistralAI
 self.llm = ChatMistralAI(model="mistral-large-latest", temperature=0.5)
 .env: MISTRAL_API_KEY
-Groq
+#Groq
 from langchain_groq import ChatGroq
 self.llm = ChatGroq(model="llama3-70b-8192", temperature=0.5)
 .env: GROQ_API_KEY
