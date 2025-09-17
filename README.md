@@ -1,7 +1,8 @@
-Atlan Customer Support Copilot
+###Atlan Customer Support Copilot
+
 An end-to-end AI-powered customer support system combining RAG-based answers, ticket escalation, and session-aware chat—served by a FastAPI backend and a Streamlit frontend.
 
-What’s inside
+##What’s inside
 Backend API with LLM planning, RAG retrieval, and ticket workflows
 
 Streamlit chat UI with session management and dashboards
