@@ -124,87 +124,23 @@ Check terminal logs for initialization errors (LLM/RAG)
   - Check dashboards under /pages
 
 
-##  5) LLM Usage Policy (Read Before Changing Models)
+## 6) Collaborator Setup Guide
+  - Clone/download repository locally
+  - Create & activate venv
+  - Install dependencies with pip install -r requirements.txt
+  Create .env file with:
+  OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  Ensure files/ contains:
+  sample1.xlsx
+  tickets.xlsx (columns: ticket_id, chat_id, subject, status, query, response, time)
+  chat_history.xlsx (columns: chat_id, timestamp, role, content, type)
+  Start backend:
+  python -m uvicorn backend:app --reload
+  Start frontend:
+  streamlit run Customer_Support_Copilot.py
+  Use “New Session” to create a fresh chat_id
 
-- **Golden Rule**: Always use LangChain chat model integrations.
-- Do not switch to raw provider SDKs — this requires major changes in prompts, chain code, and output parsing.
-- To switch providers, update only:
-  - File: backend.py
-  - Class: BackendState
-  - Method: _initialize_llm(self)
-  - Provider examples:
-    - OpenAI (default)
-    - from langchain_openai import ChatOpenAI
-    - self.llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.5)
-    - .env: OPENAI_API_KEY
-      
-    - **Azure OpenAI**
-      ```python
-      from langchain_openai import AzureChatOpenAI
-      self.llm = AzureChatOpenAI(
-      azure_deployment="YOUR_DEPLOYMENT_NAME",
-      api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-      azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-      api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview"),
-      temperature=0.5,
-       )
-      .env: AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_VERSION
-      ```
-Anthropic (Claude)
-from langchain_anthropic import ChatAnthropic
-self.llm = ChatAnthropic(model="claude-3-5-sonnet-20240620", temperature=0.5)
-.env: ANTHROPIC_API_KEY
-Google (Gemini)
-from langchain_google_genai import ChatGoogleGenerativeAI
-self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0.5)
-.env: GOOGLE_API_KEY
-Mistral
-from langchain_mistralai import ChatMistralAI
-self.llm = ChatMistralAI(model="mistral-large-latest", temperature=0.5)
-.env: MISTRAL_API_KEY
-#Groq
-from langchain_groq import ChatGroq
-self.llm = ChatGroq(model="llama3-70b-8192", temperature=0.5)
-.env: GROQ_API_KEY
-Together AI
-from langchain_together import ChatTogether
-self.llm = ChatTogether(model="meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo", temperature=0.5)
-.env: TOGETHER_API_KEY
-Local Ollama
-from langchain_ollama import ChatOllama
-self.llm = ChatOllama(model="llama3.1", base_url=os.getenv("OLLAMA_HOST","http://localhost:11434"), temperature=0.5)
-.env: OLLAMA_HOST (default: http://localhost:11434)
-OpenAI-Compatible Servers (vLLM, LM Studio, TGI, llama.cpp)
-from langchain_openai import ChatOpenAI
-self.llm = ChatOpenAI(
-    model="mistral:latest",
-    base_url=os.getenv("OPENAI_BASE_URL"),
-    api_key=os.getenv("OPENAI_API_KEY","not-needed"),
-    temperature=0.5,
-)
-.env: OPENAI_BASE_URL, OPENAI_API_KEY (dummy if server doesn’t enforce auth)
-Restart after changes:
-python -m uvicorn backend:app --reload
-
-
-## 7) Collaborator Setup Guide
-
-Clone/download repository locally
-Create & activate venv
-Install dependencies with pip install -r requirements.txt
-Create .env file with:
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Ensure files/ contains:
-sample1.xlsx
-tickets.xlsx (columns: ticket_id, chat_id, subject, status, query, response, time)
-chat_history.xlsx (columns: chat_id, timestamp, role, content, type)
-Start backend:
-python -m uvicorn backend:app --reload
-Start frontend:
-streamlit run Customer_Support_Copilot.py
-Use “New Session” to create a fresh chat_id
-
-##  8) API Quick Reference
+##  7) API Quick Reference
 ```bash
 Base URL: http://localhost:8000
 GET /health → Basic heartbeat with uptime
