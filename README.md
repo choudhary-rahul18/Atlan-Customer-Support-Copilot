@@ -124,21 +124,21 @@ Check terminal logs for initialization errors (LLM/RAG)
   - Check dashboards under /pages
 
 
-## 6) Collaborator Setup Guide
+## 5) Collaborator Setup Guide
   - Clone/download repository locally
   - Create & activate venv
   - Install dependencies with pip install -r requirements.txt
-  Create .env file with:
-  OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  Ensure files/ contains:
-  sample1.xlsx
-  tickets.xlsx (columns: ticket_id, chat_id, subject, status, query, response, time)
-  chat_history.xlsx (columns: chat_id, timestamp, role, content, type)
-  Start backend:
-  python -m uvicorn backend:app --reload
-  Start frontend:
-  streamlit run Customer_Support_Copilot.py
-  Use “New Session” to create a fresh chat_id
+  - Create .env file with:
+  - OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  - Ensure files/ contains:
+    - sample1.xlsx
+    - tickets.xlsx (columns: ticket_id, chat_id, subject, status, query, response, time)
+    - chat_history.xlsx (columns: chat_id, timestamp, role, content, type)
+  - Start backend:
+    - python -m uvicorn backend:app --reload
+  - Start frontend:
+    - streamlit run Customer_Support_Copilot.py
+  - Use “New Session” to create a fresh chat_id
 
 ##  7) API Quick Reference
 ```bash
