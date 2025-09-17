@@ -68,18 +68,17 @@ pip install -r requirements.txt
 ```
 
 ## 2) Environment Variables
-```bash
-Create a .env file in the project root with:
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Tips:
-Keep .env out of version control.
-Provide a .env.example for collaborators with placeholder values.
+
+- Create a .env file in the project root with:
+- OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- **Tips**:
+  - Keep .env out of version control.
+  - Provide a .env.example for collaborators with placeholder values.
 ##  3) Data Files
-Ensure the files/ directory contains:
-files/sample1.xlsx → Knowledge base for RAG
-files/tickets.xlsx → Tickets store
-files/chat_history.xlsx → Chat history store
-```
+- Ensure the files/ directory contains:
+- files/sample1.xlsx → Knowledge base for RAG
+- files/tickets.xlsx → Tickets store
+- files/chat_history.xlsx → Chat history store
 
 ## 3) Common Issues & Troubleshooting
 ```bash
