@@ -124,28 +124,29 @@ Check terminal logs for initialization errors (LLM/RAG)
   - Check dashboards under /pages
 
 
-##  6) LLM Usage Policy (Read Before Changing Models)
+##  5) LLM Usage Policy (Read Before Changing Models)
 
-*Golden Rule: Always use LangChain chat model integrations.
-*Do not switch to raw provider SDKs — this requires major changes in prompts, chain code, and output parsing.
-*To switch providers, update only:
-*File: backend.py
-Class: BackendState
-Method: _initialize_llm(self)
-Provider examples:
-OpenAI (default)
-from langchain_openai import ChatOpenAI
-self.llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.5)
-.env: OPENAI_API_KEY
-Azure OpenAI
-from langchain_openai import AzureChatOpenAI
-self.llm = AzureChatOpenAI(
-    azure_deployment="YOUR_DEPLOYMENT_NAME",
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview"),
-    temperature=0.5,
-)
+- **Golden Rule**: Always use LangChain chat model integrations.
+- Do not switch to raw provider SDKs — this requires major changes in prompts, chain code, and output parsing.
+- To switch providers, update only:
+  - File: backend.py
+  - Class: BackendState
+  - Method: _initialize_llm(self)
+  - Provider examples:
+    - OpenAI (default)
+    - from langchain_openai import ChatOpenAI
+    - self.llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.5)
+    - .env: OPENAI_API_KEY
+      
+    - **Azure OpenAI**
+      from langchain_openai import AzureChatOpenAI
+      self.llm = AzureChatOpenAI(
+      azure_deployment="YOUR_DEPLOYMENT_NAME",
+      api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+      azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+      api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview"),
+      temperature=0.5,
+       )
 .env: AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_VERSION
 Anthropic (Claude)
 from langchain_anthropic import ChatAnthropic
