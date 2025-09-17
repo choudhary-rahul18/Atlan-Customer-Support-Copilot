@@ -119,6 +119,7 @@ Check dashboards under /pages
 ```
 
 ##  6) LLM Usage Policy (Read Before Changing Models)
+```bash
 Golden Rule: Always use LangChain chat model integrations.
 Do not switch to raw provider SDKs — this requires major changes in prompts, chain code, and output parsing.
 To switch providers, update only:
@@ -175,8 +176,10 @@ self.llm = ChatOpenAI(
 .env: OPENAI_BASE_URL, OPENAI_API_KEY (dummy if server doesn’t enforce auth)
 Restart after changes:
 python -m uvicorn backend:app --reload
+```
 
 ## 7) Collaborator Setup Guide
+```bash
 Clone/download repository locally
 Create & activate venv
 Install dependencies with pip install -r requirements.txt
@@ -191,8 +194,10 @@ python -m uvicorn backend:app --reload
 Start frontend:
 streamlit run Customer_Support_Copilot.py
 Use “New Session” to create a fresh chat_id
+```
 
 ##  8) API Quick Reference
+```bash
 Base URL: http://localhost:8000
 GET /health → Basic heartbeat with uptime
 GET /status → LLM/RAG/DB flags + timestamp
@@ -208,13 +213,22 @@ POST /query → Processes user message
 GET /tickets/{chat_id} → Returns ticket metadata
 POST /sessions/persist → Persists chat history
 { "chat_id": "abcd1234", "chat_history": [ ... ] }
-⚠️ 9) Common Issues & Troubleshooting (Duplicate Section for Quick Access)
+```
+
+## 9) Common Issues & Troubleshooting (Duplicate Section for Quick Access)
+```bash
 (Same as section 4, repeated intentionally for easy lookup).
-⚙️ 10) Configuration Notes
+```
+
+## 10) Configuration Notes
+```bash
 Ticket store path: files/tickets.xlsx (set in backend constants)
 RAG data: Reads files/sample1.xlsx and precomputes chunks/embeddings
 Link formatting: References appended as Markdown (max 3 sources)
-📝 11) Quick Commands Cheat Sheet
+```
+
+## 11) Quick Commands Cheat Sheet
+```bash
 # Create venv and install
 python -m venv venv
 source venv/bin/activate
@@ -235,3 +249,4 @@ rm -rf venv
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
