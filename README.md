@@ -16,6 +16,19 @@ An end-to-end **AI-powered customer support system** combining **RAG-based answe
 - **Clean, reproducible setup** using a virtual environment  
 
 ---
+## Capabilities of Customer Support Copilot
+- Understands what customers actually mean using chat history
+- Detects emotions like frustrated, curious, angry, or neutral
+- Adjusts responses based on customer mood with empathy or professionalism
+- Instantly identifies when customers are asking about a ticket
+- Differentiates between current tickets and older tickets
+- Provides quick status updates without repeated details
+- Recognizes urgent cases and escalates to senior agents when needed
+- Answers questions by pulling information from the company’s database or FAQs
+- Provides accurate and up-to-date responses instantly
+- Reminds customers to keep their Chat ID and Ticket ID handy
+- Automatically chooses the best response: ticket update, escalation, or information
+
 
 ##  Project Structure  
 
