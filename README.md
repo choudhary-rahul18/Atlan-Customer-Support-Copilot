@@ -71,6 +71,7 @@ Atlan Customer Support Copilot/
 
 
 ##  1) Setup (Recommended: Virtual Environment)  
+change **API BASE URL** in Customer_Support_Copilot.py to "http://localhost:8000" for local run.
 
 ```bash
 # 1. Navigate to the project directory
