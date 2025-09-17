@@ -37,7 +37,7 @@ Atlan Customer Support Copilot/
 │   ├── tickets.xlsx               # Tickets database
 │   └── chat_history.xlsx          # Chat history database
 └── venv/                          # Virtual environment (recommended)
-
+```
 
 ---
 
