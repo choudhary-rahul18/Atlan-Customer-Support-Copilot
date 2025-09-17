@@ -1,4 +1,3 @@
-Here’s the complete README.md:
 # Atlan Customer Support Copilot  
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)  
@@ -182,7 +181,7 @@ POST /sessions/persist → Persists chat history
 { "chat_id": "abcd1234", "chat_history": [ ... ] }
 ```
 
-## 7) Common Issues & Troubleshooting (Duplicate Section for Quick Access)
+## 7) Common Issues & Troubleshooting
 - “ModuleNotFoundError: No module named ‘langchain_openai’”
   - Ensure venv is activated.
   - Use: python -m uvicorn backend:app --reload
