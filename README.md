@@ -24,9 +24,9 @@ An end-to-end **AI-powered customer support system** combining **RAG-based answe
 Atlan Customer Support Copilot/
 ├── backend.py                     # FastAPI backend (LLM, RAG, tickets)
 ├── Customer_Support_Copilot.py    # Streamlit frontend (main app)
-├── rag.py                         # RAG pipeline (embeddings, FAISS, BM25)
-├── database.py                    # Ticket + history persistence (Excel)
-├── prompts.py                     # Prompt templates (Master, RAG, Ticket, etc.)
+├── rag.py                         # RAG pipeline
+├── database.py                    # Ticket + history persistence
+├── prompts.py                     # Prompt templates
 ├── requirements.txt               # Python dependencies
 ├── .env                           # Environment variables (OPENAI_API_KEY)
 ├── pages/                         # Frontend dashboards
@@ -183,6 +183,21 @@ POST /sessions/persist → Persists chat history
 ```
 
 ## 7) Common Issues & Troubleshooting (Duplicate Section for Quick Access)
+- “ModuleNotFoundError: No module named ‘langchain_openai’”
+  - Ensure venv is activated.
+  - Use: python -m uvicorn backend:app --reload
+  - Reinstall in venv: pip install langchain-openai
+- “OpenAI key not found”
+  - Confirm .env exists in project root.
+  - Ensure OPENAI_API_KEY is properly set.
+  - Restart the backend after setting .env.
+- Excel file “permission denied”
+  - Close the file if opened in Excel.
+  - Ensure paths are correct and writable.
+- Frontend loads but backend offline
+  - Start backend first.
+  - Verify http://localhost:8000/health returns status.
+  - Check terminal logs for initialization errors (LLM/RAG).
 
 
 ## 8) Configuration Notes
