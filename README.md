@@ -65,7 +65,10 @@ venv\Scripts\activate
 # 3. Upgrade pip and install dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
+```
+
 ## 2) Environment Variables
+```bash
 Create a .env file in the project root with:
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Tips:
@@ -76,8 +79,10 @@ Ensure the files/ directory contains:
 files/sample1.xlsx → Knowledge base for RAG
 files/tickets.xlsx → Tickets store
 files/chat_history.xlsx → Chat history store
+```
 
 ## 4) Common Issues & Troubleshooting
+```bash
 “ModuleNotFoundError: No module named ‘langchain_openai’”
 Ensure venv is activated
 Use: python -m uvicorn backend:app --reload
@@ -93,8 +98,10 @@ Frontend loads but backend offline
 Start backend first
 Verify http://localhost:8000/health
 Check terminal logs for initialization errors (LLM/RAG)
+```
 
 ##  5) Recommended Workflow for Collaborators
+```bash
 Clone or download the project
 Create and activate a virtual environment
 Install dependencies: pip install -r requirements.txt
@@ -109,6 +116,7 @@ Start frontend:
 streamlit run Customer_Support_Copilot.py
 Use the “New Session” button to generate a fresh chat_id
 Check dashboards under /pages
+```
 
 ##  6) LLM Usage Policy (Read Before Changing Models)
 Golden Rule: Always use LangChain chat model integrations.
