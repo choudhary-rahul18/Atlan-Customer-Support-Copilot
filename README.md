@@ -183,19 +183,16 @@ POST /sessions/persist → Persists chat history
 ```
 
 ## 7) Common Issues & Troubleshooting (Duplicate Section for Quick Access)
-```bash
 
-```
 
-## 10) Configuration Notes
-```bash
-Ticket store path: files/tickets.xlsx (set in backend constants)
-RAG data: Reads files/sample1.xlsx and precomputes chunks/embeddings
-Link formatting: References appended as Markdown (max 3 sources)
-```
+## 8) Configuration Notes
 
-## 11) Quick Commands Cheat Sheet
-```bash
+- Ticket store path: files/tickets.xlsx (set in backend constants)
+- RAG data: Reads files/sample1.xlsx and precomputes chunks/embeddings
+- Link formatting: References appended as Markdown (max 3 sources)
+
+## 9) Quick Commands Cheat Sheet
+```python
 # Create venv and install
 python -m venv venv
 source venv/bin/activate
