@@ -140,26 +140,27 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Create a .env in the project root and add:
-text
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  - Create a .env in the project root and add:
+   #text
+    - OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-
-Ensure the files/ directory exists and includes:
-sample1.xlsx
-tickets.xlsx (columns: ticket_id, chat_id, subject, status, query, response, time)
-chat_history.xlsx (columns: chat_id, timestamp, role, content, type)
-Start the backend using the module form (ensures the venv interpreter is used):
-bash
+- Ensure the files/ directory exists and includes:
+  - sample1.xlsx
+  - tickets.xlsx (columns: ticket_id, chat_id, subject, status, query, response, time)
+  - chat_history.xlsx
+  
+- Start the backend using the module form (ensures the venv interpreter is used):
+```python
 python -m uvicorn backend:app --reload
+```
 
-
-Start the frontend in a second terminal (with the same venv activated):
+- Start the frontend in a second terminal (with the same venv activated):
+```python
 streamlit run Customer_Support_Copilot.py
+```
 
-
-Use the “New Session” button to create a fresh chat_id and clear history.
-If switching LLMs, only update the import and constructor in backend.py → BackendState._initialize_llm and add the provider’s env vars to .env. Do not change prompt or chain code.
+- Use the “New Session” button to create a fresh chat_id and clear history.
+- If switching LLMs, only update the import and constructor in backend.py → BackendState._initialize_llm and add the provider’s env vars to .env. Do not change prompt or chain code.
 
 
 ##  6) API Quick Reference
