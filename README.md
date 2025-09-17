@@ -125,22 +125,44 @@ Check terminal logs for initialization errors (LLM/RAG)
 
 
 ## 5) Collaborator Setup Guide
-  - Clone/download repository locally
-  - Create & activate venv
-  - Install dependencies with pip install -r requirements.txt
-  - Create .env file with:
-  - OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  - Ensure files/ contains:
-    - sample1.xlsx
-    - tickets.xlsx (columns: ticket_id, chat_id, subject, status, query, response, time)
-    - chat_history.xlsx (columns: chat_id, timestamp, role, content, type)
-  - Start backend:
-    - python -m uvicorn backend:app --reload
-  - Start frontend:
-    - streamlit run Customer_Support_Copilot.py
-  - Use “New Session” to create a fresh chat_id
+# For teammates setting this up locally:
+ - Clone/download the repository to a local folder.
+ - Create a virtual environment inside the project and activate it:
 
-##  7) API Quick Reference
+ - python -m venv venv
+```python
+# macOS/Linux:
+source venv/bin/activate
+# Windows:
+# venv\Scripts\activate
+Install dependencies from requirements.txt:
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Create a .env in the project root and add:
+text
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+Ensure the files/ directory exists and includes:
+sample1.xlsx
+tickets.xlsx (columns: ticket_id, chat_id, subject, status, query, response, time)
+chat_history.xlsx (columns: chat_id, timestamp, role, content, type)
+Start the backend using the module form (ensures the venv interpreter is used):
+bash
+python -m uvicorn backend:app --reload
+
+
+Start the frontend in a second terminal (with the same venv activated):
+streamlit run Customer_Support_Copilot.py
+
+
+Use the “New Session” button to create a fresh chat_id and clear history.
+If switching LLMs, only update the import and constructor in backend.py → BackendState._initialize_llm and add the provider’s env vars to .env. Do not change prompt or chain code.
+
+
+##  6) API Quick Reference
 ```bash
 Base URL: http://localhost:8000
 GET /health → Basic heartbeat with uptime
@@ -159,9 +181,9 @@ POST /sessions/persist → Persists chat history
 { "chat_id": "abcd1234", "chat_history": [ ... ] }
 ```
 
-## 9) Common Issues & Troubleshooting (Duplicate Section for Quick Access)
+## 7) Common Issues & Troubleshooting (Duplicate Section for Quick Access)
 ```bash
-(Same as section 4, repeated intentionally for easy lookup).
+
 ```
 
 ## 10) Configuration Notes
