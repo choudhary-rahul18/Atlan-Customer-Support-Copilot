@@ -20,22 +20,24 @@ An end-to-end **AI-powered customer support system** combining **RAG-based answe
 
 ## 📂 Project Structure  
 
+```text
 Atlan Customer Support Copilot/
-├── backend.py # FastAPI backend (LLM, RAG, tickets)
-├── Customer_Support_Copilot.py # Streamlit frontend (main app)
-├── rag.py # RAG pipeline (embeddings, FAISS, BM25)
-├── database.py # Ticket + history persistence (Excel)
-├── prompts.py # Prompt templates (Master, RAG, Ticket, etc.)
-├── requirements.txt # Python dependencies
-├── .env # Environment variables (OPENAI_API_KEY)
-├── pages/ # Frontend dashboards
-│ ├── Support_Tickets_Dashboard.py
-│ └── Chat_History_Dashboard.py
-├── files/ # App data (make sure these exist)
-│ ├── sample1.xlsx # Knowledge base (source for RAG)
-│ ├── tickets.xlsx # Tickets database
-│ └── chat_history.xlsx # Chat history database
-└── venv/ # Virtual environment (recommended)
+├── backend.py                     # FastAPI backend (LLM, RAG, tickets)
+├── Customer_Support_Copilot.py    # Streamlit frontend (main app)
+├── rag.py                         # RAG pipeline (embeddings, FAISS, BM25)
+├── database.py                    # Ticket + history persistence (Excel)
+├── prompts.py                     # Prompt templates (Master, RAG, Ticket, etc.)
+├── requirements.txt               # Python dependencies
+├── .env                           # Environment variables (OPENAI_API_KEY)
+├── pages/                         # Frontend dashboards
+│   ├── Support_Tickets_Dashboard.py
+│   └── Chat_History_Dashboard.py
+├── files/                         # App data (make sure these exist)
+│   ├── sample1.xlsx               # Knowledge base (source for RAG)
+│   ├── tickets.xlsx               # Tickets database
+│   └── chat_history.xlsx          # Chat history database
+└── venv/                          # Virtual environment (recommended)
+
 
 ---
 
