@@ -1,11 +1,5 @@
 # Atlan Customer Support Copilot  
-
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)  
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)  
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-red.svg)](https://streamlit.io/)  
-[![LangChain](https://img.shields.io/badge/LangChain-0.2+-purple.svg)](https://www.langchain.com/)  
-
-An end-to-end **AI-powered customer support system** combining **Hybrid RAG-based answers**, **ticket escalation**, and **session-aware chat** — served by a **FastAPI backend** and a **Streamlit frontend**.  
+An end to end **AI-powered customer support system** combining **Hybrid RAG-based answers**, **ticket escalation**, and **session-aware chat**  served by a **FastAPI backend** and a **Streamlit frontend**.  
 
 ---
 
