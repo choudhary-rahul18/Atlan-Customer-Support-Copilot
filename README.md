@@ -5,7 +5,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-red.svg)](https://streamlit.io/)  
 [![LangChain](https://img.shields.io/badge/LangChain-0.2+-purple.svg)](https://www.langchain.com/)  
 
-An end-to-end **AI-powered customer support system** combining **RAG-based answers**, **ticket escalation**, and **session-aware chat** — served by a **FastAPI backend** and a **Streamlit frontend**.  
+An end-to-end **AI-powered customer support system** combining **Hybrid RAG-based answers**, **ticket escalation**, and **session-aware chat** — served by a **FastAPI backend** and a **Streamlit frontend**.  
 
 ---
 
