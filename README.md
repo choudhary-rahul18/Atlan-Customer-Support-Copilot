@@ -105,23 +105,6 @@ Start backend first
 Check terminal logs for initialization errors (LLM/RAG)
 ```
 
-##  4) Recommended Workflow for Collaborators
-
-- Clone or download the project
-- Create and activate a virtual environment
-- Install dependencies: pip install -r requirements.txt
-- Add .env with OPENAI_API_KEY
-- Ensure files/ contains: sample1.xlsx, tickets.xlsx, chat_history.xlsx
-- **Start backend**:
-  - python -m uvicorn backend:app --reload
-  - API docs: http://localhost:8000/docs
-  - Health: http://localhost:8000/health
-  - Status: http://localhost:8000/status
-  - Start frontend:
-  - streamlit run Customer_Support_Copilot.py
-  - Use the “New Session” button to generate a fresh chat_id
-  - Check dashboards under /pages
-
 
 ## 5) Collaborator Setup Guide
 #### For teammates setting this up locally:
@@ -138,6 +121,11 @@ Install dependencies from requirements.txt:
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+  -**Start backend**:
+  - python -m uvicorn backend:app --reload
+  - API docs: http://localhost:8000/docs
+  - Health: http://localhost:8000/health
+  - Status: http://localhost:8000/status
 
   - Create a .env in the project root and add:
    #text
