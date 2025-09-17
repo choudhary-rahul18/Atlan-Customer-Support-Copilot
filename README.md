@@ -10,7 +10,7 @@ An end-to-end **AI-powered customer support system** combining **RAG-based answe
 
 ---
 
-## 📦 What’s Inside  
+##  What’s Inside  
 - **Backend API** with LLM planning, RAG retrieval, and ticket workflows  
 - **Streamlit chat UI** with session management and dashboards  
 - **Excel-based storage** for tickets, chat history, and KB source  
@@ -18,7 +18,7 @@ An end-to-end **AI-powered customer support system** combining **RAG-based answe
 
 ---
 
-## 📂 Project Structure  
+##  Project Structure  
 
 ```text
 Atlan Customer Support Copilot/
@@ -41,13 +41,13 @@ Atlan Customer Support Copilot/
 
 ---
 
-## 🛠️ Prerequisites  
+##  Prerequisites  
 - Python **3.8+** installed  
 - An **OpenAI API key**  
 
 ---
 
-## 🚀 1) Setup (Recommended: Virtual Environment)  
+##  1) Setup (Recommended: Virtual Environment)  
 
 ```bash
 # 1. Navigate to the project directory
@@ -65,18 +65,19 @@ venv\Scripts\activate
 # 3. Upgrade pip and install dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
-🔑 2) Environment Variables
+## 2) Environment Variables
 Create a .env file in the project root with:
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Tips:
 Keep .env out of version control.
 Provide a .env.example for collaborators with placeholder values.
-📊 3) Data Files
+##  3) Data Files
 Ensure the files/ directory contains:
 files/sample1.xlsx → Knowledge base for RAG
 files/tickets.xlsx → Tickets store
 files/chat_history.xlsx → Chat history store
-⚠️ 4) Common Issues & Troubleshooting
+
+## 4) Common Issues & Troubleshooting
 “ModuleNotFoundError: No module named ‘langchain_openai’”
 Ensure venv is activated
 Use: python -m uvicorn backend:app --reload
@@ -92,7 +93,8 @@ Frontend loads but backend offline
 Start backend first
 Verify http://localhost:8000/health
 Check terminal logs for initialization errors (LLM/RAG)
-👥 5) Recommended Workflow for Collaborators
+
+##  5) Recommended Workflow for Collaborators
 Clone or download the project
 Create and activate a virtual environment
 Install dependencies: pip install -r requirements.txt
@@ -107,7 +109,8 @@ Start frontend:
 streamlit run Customer_Support_Copilot.py
 Use the “New Session” button to generate a fresh chat_id
 Check dashboards under /pages
-🤖 6) LLM Usage Policy (Read Before Changing Models)
+
+##  6) LLM Usage Policy (Read Before Changing Models)
 Golden Rule: Always use LangChain chat model integrations.
 Do not switch to raw provider SDKs — this requires major changes in prompts, chain code, and output parsing.
 To switch providers, update only:
@@ -164,7 +167,8 @@ self.llm = ChatOpenAI(
 .env: OPENAI_BASE_URL, OPENAI_API_KEY (dummy if server doesn’t enforce auth)
 Restart after changes:
 python -m uvicorn backend:app --reload
-👥 7) Collaborator Setup Guide
+
+## 7) Collaborator Setup Guide
 Clone/download repository locally
 Create & activate venv
 Install dependencies with pip install -r requirements.txt
@@ -179,7 +183,8 @@ python -m uvicorn backend:app --reload
 Start frontend:
 streamlit run Customer_Support_Copilot.py
 Use “New Session” to create a fresh chat_id
-🔌 8) API Quick Reference
+
+##  8) API Quick Reference
 Base URL: http://localhost:8000
 GET /health → Basic heartbeat with uptime
 GET /status → LLM/RAG/DB flags + timestamp
